@@ -34,12 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Dynamic Tab Switching for Dashboard Navigation ---
   const navItems = document.querySelectorAll('.nav-item');
   const pageTitle = document.querySelector('.page-title');
-  const dashboardContainer = document.querySelector('.dashboard-container');
-  
-  let overviewContent = null;
-  if(dashboardContainer) {
-      overviewContent = dashboardContainer.innerHTML;
-  }
+  const allPanes = document.querySelectorAll('.tab-pane');
 
   navItems.forEach(link => {
     // Skip logout link or real links
@@ -55,30 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const tabName = link.textContent.trim();
       if(pageTitle) pageTitle.textContent = tabName;
       
-      if(tabName.includes('Overview') || tabName === 'Marketplace' || tabName === 'Platform Overview' || tabName === 'FPO Overview') {
-          // Restore original content
-          dashboardContainer.innerHTML = overviewContent;
-          lucide.createIcons({ root: dashboardContainer });
-          
-          // If there's a chart, we need to re-initialize it because destroying innerHTML destroys the canvas context
-          // For a mock, a simple reload is easier to reset charts, but since it's a SPA mock, we will just show a toast
-          showToast(`Switched back to ${tabName}`, 'success');
-          
-          // Reload page to re-render charts cleanly for the mock
-          if(window.Chart) {
-             window.location.reload(); 
-          }
-      } else {
-          // Show placeholder for unbuilt modules
-          dashboardContainer.innerHTML = `
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; color: var(--text-muted); text-align: center;" class="fade-in">
-                <i data-lucide="hammer" style="width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
-                <h2 style="font-family: 'Outfit', sans-serif; color: var(--text-main); margin-bottom: 8px;">${tabName}</h2>
-                <p>This module is currently under development for the next phase.</p>
-                <button class="btn-secondary" style="margin-top: 24px;" onclick="window.location.reload()">Back to Overview</button>
-            </div>
-          `;
-          lucide.createIcons({ root: dashboardContainer });
+      const targetId = 'tab-' + tabName.toLowerCase().replace(/\s+/g, '-');
+      
+      let found = false;
+      allPanes.forEach(pane => {
+        if(pane.id === targetId) {
+            pane.classList.add('active');
+            found = true;
+        } else {
+            pane.classList.remove('active');
+        }
+      });
+      
+      // Re-init icons in case the pane was hidden
+      lucide.createIcons();
+      
+      // If no matching tab-pane is found, fall back to "Under Development"
+      if (!found && document.getElementById('tab-under-dev')) {
+          allPanes.forEach(p => p.classList.remove('active'));
+          const devPane = document.getElementById('tab-under-dev');
+          devPane.classList.add('active');
+          document.getElementById('dev-title').textContent = tabName;
       }
     });
   });
