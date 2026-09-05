@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgriLink AI — Login</title>
 <link rel="stylesheet" href="css/style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
 <style>
   /* Page specific styles for Login split screen */
   .login-page {
@@ -175,11 +174,6 @@
 
   <div class="login-page">
     
-    <!-- Top Nav Admin Link (Absolute Top Left) -->
-    <div class="top-nav">
-      <a href="admin-login.html" class="admin-link"><i data-lucide="settings" style="width:16px; height:16px;"></i> Admin Portal</a>
-    </div>
-
     <!-- 3D Visual Side -->
     <div class="visual-side">
       <div class="scene-3d">
@@ -206,6 +200,7 @@
             <button class="role-btn active" data-role="farmer">Farmer</button>
             <button class="role-btn" data-role="buyer">Buyer</button>
             <button class="role-btn" data-role="fpo">FPO</button>
+            <button class="role-btn" data-role="admin">Admin</button>
           </div>
 
           <form id="loginForm">
@@ -245,6 +240,5 @@
   </div>
 
   <script src="js/auth.js"></script>
-  <script>lucide.createIcons();</script>
 </body>
 </html>
