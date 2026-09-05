@@ -249,6 +249,36 @@
 .badge-warning { background: rgba(243, 156, 18, 0.1); color: #f39c12; }
 .badge-danger { background: rgba(231, 76, 60, 0.1); color: #e74c3c; }
 
+/* Notifications Dropdown */
+.notifications-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: none;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.notifications-dropdown.show {
+  display: flex;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.notif-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.notif-item:hover {
+  background: rgba(0, 191, 165, 0.02);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .dashboard-container {

@@ -49,7 +49,9 @@
 
     <div class="dashboard-container fade-in">
       
-      <!-- Stat Cards -->
+      <!-- Platform Overview Tab -->
+      <div id="tab-platform-overview" class="tab-pane active">
+        <!-- Stat Cards -->
       <div class="grid-cards">
         <div class="card-3d stat-card" style="background: linear-gradient(135deg, #1b5e20, #004d40); color: white;">
           <div class="stat-header" style="color: rgba(255,255,255,0.8);">
@@ -121,6 +123,154 @@
         </div>
 
       </div>
+      <!-- End Platform Overview Tab -->
+
+      <!-- User Management Tab -->
+      <div id="tab-user-management" class="tab-pane">
+        <div style="display:flex; justify-content:space-between; margin-bottom:24px;">
+          <h3 class="section-title" style="margin-bottom:0;">Platform Users</h3>
+          <div class="input-group" style="margin-bottom:0; width:300px;">
+            <input type="text" placeholder="Search by name, ID, role...">
+          </div>
+        </div>
+        <div class="dashboard-section glass-panel">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Registration Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>USR-9921</td>
+                <td>Ramesh Kumar</td>
+                <td><span class="badge" style="background:#e8f5e9; color:#2e7d32;">Farmer</span></td>
+                <td>2026-01-15</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="badge badge-danger" style="border:none; cursor:pointer;">Suspend</button></td>
+              </tr>
+              <tr>
+                <td>USR-8812</td>
+                <td>Fresh Foods Ltd</td>
+                <td><span class="badge" style="background:#e3f2fd; color:#1565c0;">Buyer</span></td>
+                <td>2026-02-10</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td><button class="badge badge-danger" style="border:none; cursor:pointer;">Suspend</button></td>
+              </tr>
+              <tr>
+                <td>USR-9945</td>
+                <td>Agri Malwa</td>
+                <td><span class="badge" style="background:#fff3e0; color:#ef6c00;">FPO</span></td>
+                <td>2026-08-20</td>
+                <td><span class="badge badge-warning">Under Review</span></td>
+                <td><button class="badge badge-success" style="border:none; cursor:pointer;">Approve</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Transactions Tab -->
+      <div id="tab-transactions" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">System-wide Transactions</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Txn ID</th>
+                <th>Buyer</th>
+                <th>Seller</th>
+                <th>Amount</th>
+                <th>Platform Fee</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TXN-9842</td>
+                <td>Green Valley FPO</td>
+                <td>AgriCorp Foods</td>
+                <td>₹4,26,000</td>
+                <td>₹4,260 (1%)</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Disputes Tab -->
+      <div id="tab-disputes" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Active Disputes</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Date Raised</th>
+                <th>Related Txn</th>
+                <th>Issue Type</th>
+                <th>Priority</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TKT-011</td>
+                <td>Today</td>
+                <td>TXN-8921</td>
+                <td>Quality Mismatch</td>
+                <td><span class="badge badge-danger">High</span></td>
+                <td><button class="badge" style="background:var(--color-primary); color:white; border:none; cursor:pointer;">Review Case</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Reports Tab -->
+      <div id="tab-reports" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Platform Reports</div>
+          <div class="grid-cards">
+            <div class="card-3d" style="padding:20px;">
+              <h3 style="margin-bottom:12px;">Monthly Revenue Report</h3>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">Platform fee collection and taxation summary.</p>
+              <button class="btn-primary" style="width:100%;"><i data-lucide="download" style="width:16px;height:16px;"></i> Export PDF</button>
+            </div>
+            <div class="card-3d" style="padding:20px;">
+              <h3 style="margin-bottom:12px;">User Activity Report</h3>
+              <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">Engagement metrics and login frequencies.</p>
+              <button class="btn-primary" style="width:100%;"><i data-lucide="download" style="width:16px;height:16px;"></i> Export CSV</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- System Analytics Tab -->
+      <div id="tab-system-analytics" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">System Health & API Analytics</div>
+          <div style="height: 300px; display:flex; align-items:center; justify-content:center; color:var(--text-muted); background:rgba(0,0,0,0.02); border-radius:8px;">
+            Server Load & Latency Charts Loading...
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback Tab -->
+      <div id="tab-under-dev" class="tab-pane">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; color: var(--text-muted); text-align: center;" class="fade-in">
+            <i data-lucide="hammer" style="width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
+            <h2 id="dev-title" style="font-family: 'Outfit', sans-serif; color: var(--text-main); margin-bottom: 8px;">Module</h2>
+            <p>This module is currently under development for the next phase.</p>
+            <button class="btn-secondary" style="margin-top: 24px;" onclick="window.location.reload()">Back to Overview</button>
+        </div>
+      </div>
 
     </div>
   </main>
@@ -165,7 +315,7 @@
     }
   });
 </script>
-<script src="js/dashboard.js"></script>
+<script src="js/dashboard.js?v=2"></script>
 <script>lucide.createIcons();</script>
 </body>
 </html>
