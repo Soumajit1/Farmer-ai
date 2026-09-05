@@ -49,7 +49,9 @@
 
     <div class="dashboard-container fade-in">
       
-      <!-- Stat Cards -->
+      <!-- FPO Overview Tab -->
+      <div id="tab-fpo-overview" class="tab-pane active">
+        <!-- Stat Cards -->
       <div class="grid-cards">
         <div class="card-3d stat-card">
           <div class="stat-header">
@@ -112,6 +114,155 @@
 
             <button class="btn-secondary" style="width: 100%; margin-top: 8px;">View All Members</button>
           </div>
+        </div>
+      </div>
+      <!-- End FPO Overview Tab -->
+
+      <!-- Member Farmers Tab -->
+      <div id="tab-member-farmers" class="tab-pane">
+        <div style="display:flex; justify-content:space-between; margin-bottom:24px;">
+          <h3 class="section-title" style="margin-bottom:0;">Member Directory</h3>
+          <button class="btn-primary">+ Add Member</button>
+        </div>
+        <div class="dashboard-section glass-panel">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Land Size</th>
+                <th>Primary Crop</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anil Sharma</td>
+                <td>Asansol</td>
+                <td>5 Acres</td>
+                <td>Wheat</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+              <tr>
+                <td>Mukesh Singh</td>
+                <td>Durgapur</td>
+                <td>3 Acres</td>
+                <td>Rice</td>
+                <td><span class="badge badge-success">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Aggregated Produce Tab -->
+      <div id="tab-aggregated-produce" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Pooled Inventory</div>
+          <div class="grid-cards">
+            <div class="card-3d" style="padding:20px;">
+              <h3 style="margin-bottom:8px;">Wheat (Grade A)</h3>
+              <p style="font-size:24px; font-weight:700; color:var(--color-primary); margin-bottom:12px;">850 <span style="font-size:14px; color:var(--text-muted); font-weight:400;">Qtl</span></p>
+              <div style="display:flex; gap:8px;">
+                <button class="btn-primary" style="flex:1; font-size:13px; padding:8px;">Find Buyers</button>
+              </div>
+            </div>
+            <div class="card-3d" style="padding:20px;">
+              <h3 style="margin-bottom:8px;">Rice (Basmati)</h3>
+              <p style="font-size:24px; font-weight:700; color:var(--color-primary); margin-bottom:12px;">350 <span style="font-size:14px; color:var(--text-muted); font-weight:400;">Qtl</span></p>
+              <div style="display:flex; gap:8px;">
+                <button class="btn-primary" style="flex:1; font-size:13px; padding:8px;">Find Buyers</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buyer Connections Tab -->
+      <div id="tab-buyer-connections" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Enterprise Buyers CRM</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Contact Person</th>
+                <th>Frequent Purchases</th>
+                <th>Contract Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AgriCorp Foods</td>
+                <td>Rajiv Mehta</td>
+                <td>Wheat, Potatoes</td>
+                <td><span class="badge badge-success">Active Contract</span></td>
+              </tr>
+              <tr>
+                <td>Fresh Foods Ltd</td>
+                <td>Sunil Verma</td>
+                <td>Vegetables</td>
+                <td><span class="badge badge-warning">Negotiating</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Transactions Tab -->
+      <div id="tab-transactions" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">FPO Ledger</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Txn ID</th>
+                <th>Date</th>
+                <th>Counterparty</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LED-1092</td>
+                <td>2026-08-10</td>
+                <td>AgriCorp Foods</td>
+                <td><span class="badge" style="background:#e8f5e9; color:#2e7d32;">Inbound (Sale)</span></td>
+                <td>₹12,50,000</td>
+                <td><span class="badge badge-success">Cleared</span></td>
+              </tr>
+              <tr>
+                <td>LED-1093</td>
+                <td>2026-08-12</td>
+                <td>Anil Sharma (Member)</td>
+                <td><span class="badge" style="background:#ffebee; color:#c62828;">Outbound (Payout)</span></td>
+                <td>₹45,200</td>
+                <td><span class="badge badge-success">Cleared</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Analytics Tab -->
+      <div id="tab-analytics" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Deep Analytics</div>
+          <div style="height: 300px; display:flex; align-items:center; justify-content:center; color:var(--text-muted); background:rgba(0,0,0,0.02); border-radius:8px;">
+            Detailed Chart Visualizations Loading...
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback Tab -->
+      <div id="tab-under-dev" class="tab-pane">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; color: var(--text-muted); text-align: center;" class="fade-in">
+            <i data-lucide="hammer" style="width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
+            <h2 id="dev-title" style="font-family: 'Outfit', sans-serif; color: var(--text-main); margin-bottom: 8px;">Module</h2>
+            <p>This module is currently under development for the next phase.</p>
+            <button class="btn-secondary" style="margin-top: 24px;" onclick="window.location.reload()">Back to Overview</button>
         </div>
       </div>
 

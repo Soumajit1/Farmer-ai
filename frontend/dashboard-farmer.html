@@ -51,7 +51,9 @@
     <!-- Dashboard Content -->
     <div class="dashboard-container fade-in">
       
-      <!-- Welcome Section -->
+      <!-- Overview Tab -->
+      <div id="tab-overview" class="tab-pane active">
+        <!-- Welcome Section -->
       <div style="margin-bottom: 32px;">
         <h1 style="font-size: 28px; margin-bottom: 8px;">Welcome back, <span id="welcomeName">Farmer</span>!</h1>
         <p style="color: var(--text-muted);">Here is what's happening in your farm business today.</p>
@@ -142,6 +144,177 @@
           </div>
         </div>
 
+      </div>
+      <!-- End Overview Tab -->
+
+      <!-- Market Prices Tab -->
+      <div id="tab-market-prices" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Live Market Prices</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Commodity</th>
+                <th>Variety</th>
+                <th>Current Price (₹/Qtl)</th>
+                <th>Trend</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wheat</td>
+                <td>Grade A</td>
+                <td>₹2,200</td>
+                <td class="trend-up">↑ 2.5%</td>
+                <td>10 mins ago</td>
+              </tr>
+              <tr>
+                <td>Rice</td>
+                <td>Basmati</td>
+                <td>₹3,600</td>
+                <td class="trend-down">↓ 1.2%</td>
+                <td>1 hour ago</td>
+              </tr>
+              <tr>
+                <td>Potatoes</td>
+                <td>Jyoti</td>
+                <td>₹850</td>
+                <td class="trend-up">↑ 5.0%</td>
+                <td>2 hours ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- My Produce Tab -->
+      <div id="tab-my-produce" class="tab-pane">
+        <div style="display:flex; justify-content:space-between; margin-bottom:24px;">
+          <h3>Manage Inventory</h3>
+          <button class="btn-primary">+ Add New Produce</button>
+        </div>
+        <div class="grid-cards">
+          <div class="card-3d" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+              <h3 style="color: var(--text-main);">Wheat (Grade A)</h3>
+              <span class="badge badge-success">Listed</span>
+            </div>
+            <p style="color: var(--text-muted); font-size:14px; margin-bottom: 16px;">Available: 50 Quintals<br>Asking Price: ₹2,200/q</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn-secondary" style="flex:1;">Edit</button>
+              <button class="btn-secondary" style="flex:1; border-color:#e74c3c; color:#e74c3c;">Remove</button>
+            </div>
+          </div>
+          <div class="card-3d" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+              <h3 style="color: var(--text-main);">Rice (Basmati)</h3>
+              <span class="badge" style="background:#eee;">Unlisted</span>
+            </div>
+            <p style="color: var(--text-muted); font-size:14px; margin-bottom: 16px;">Available: 30 Quintals<br>Asking Price: ---</p>
+            <div style="display:flex; gap:8px;">
+              <button class="btn-primary" style="flex:1;">List Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buyer Offers Tab -->
+      <div id="tab-buyer-offers" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Incoming Offers</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Buyer</th>
+                <th>Produce</th>
+                <th>Quantity</th>
+                <th>Offered Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fresh Foods Ltd</td>
+                <td>Wheat</td>
+                <td>50 Qtl</td>
+                <td>₹2,150/q</td>
+                <td>
+                  <button class="badge badge-success" style="border:none; cursor:pointer;">Accept</button>
+                  <button class="badge badge-danger" style="border:none; cursor:pointer;">Reject</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Transactions Tab -->
+      <div id="tab-transactions" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Transaction History</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Buyer</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TXN-1029</td>
+                <td>2026-08-15</td>
+                <td>AgriCorp</td>
+                <td>₹45,200</td>
+                <td><span class="badge badge-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>TXN-1035</td>
+                <td>2026-09-02</td>
+                <td>Local Mandi</td>
+                <td>₹12,500</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Logistics Tab -->
+      <div id="tab-logistics" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Active Shipments</div>
+          <div style="padding: 16px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 16px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+              <strong>Shipment #SHP-882 (Wheat to AgriCorp)</strong>
+              <span class="badge badge-warning">In Transit</span>
+            </div>
+            <div style="height:4px; background:#eee; border-radius:2px; margin: 24px 0; position:relative;">
+              <div style="position:absolute; top:0; left:0; height:100%; width:50%; background:var(--color-primary); border-radius:2px;"></div>
+              <div style="position:absolute; top:-6px; left:0; width:16px; height:16px; border-radius:50%; background:var(--color-primary);"></div>
+              <div style="position:absolute; top:-6px; left:50%; width:16px; height:16px; border-radius:50%; background:var(--color-primary);"></div>
+              <div style="position:absolute; top:-6px; right:0; width:16px; height:16px; border-radius:50%; background:#ccc;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted);">
+              <span>Dispatched<br>Sept 4</span>
+              <span style="text-align:center;">In Transit<br>Today</span>
+              <span style="text-align:right;">Expected<br>Sept 6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback / Under Development Tab -->
+      <div id="tab-under-dev" class="tab-pane">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; color: var(--text-muted); text-align: center;" class="fade-in">
+            <i data-lucide="hammer" style="width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
+            <h2 id="dev-title" style="font-family: 'Outfit', sans-serif; color: var(--text-main); margin-bottom: 8px;">Module</h2>
+            <p>This module is currently under development for the next phase.</p>
+            <button class="btn-secondary" style="margin-top: 24px;" onclick="window.location.reload()">Back to Overview</button>
+        </div>
       </div>
 
     </div>

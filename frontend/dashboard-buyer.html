@@ -50,7 +50,9 @@
 
     <div class="dashboard-container fade-in">
       
-      <!-- Filters -->
+      <!-- Marketplace Tab -->
+      <div id="tab-marketplace" class="tab-pane active">
+        <!-- Filters -->
       <div class="dashboard-section glass-panel">
         <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
           <span style="font-weight: 600;">Filters:</span>
@@ -141,6 +143,102 @@
           <button class="btn-primary" style="width: 100%;">Make Offer</button>
         </div>
 
+      </div>
+      <!-- End Marketplace Tab -->
+
+      <!-- My Offers Tab -->
+      <div id="tab-my-offers" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">My Pending & Past Offers</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Produce</th>
+                <th>Farmer</th>
+                <th>Offered Price</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wheat (Grade A)</td>
+                <td>Ramesh Kumar</td>
+                <td>₹2,100/q</td>
+                <td>50 Qtl</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+              </tr>
+              <tr>
+                <td>Basmati Rice</td>
+                <td>Green Valley FPO</td>
+                <td>₹3,550/q</td>
+                <td>120 Qtl</td>
+                <td><span class="badge badge-success">Accepted</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Transactions Tab -->
+      <div id="tab-transactions" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Purchase History</div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Seller</th>
+                <th>Total Amount</th>
+                <th>Invoice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TXN-9842</td>
+                <td>2026-08-20</td>
+                <td>Green Valley FPO</td>
+                <td>₹4,26,000</td>
+                <td><button class="badge" style="background:#eee; border:none; cursor:pointer;">Download PDF</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Logistics Tab -->
+      <div id="tab-logistics" class="tab-pane">
+        <div class="dashboard-section glass-panel">
+          <div class="section-title">Inbound Deliveries</div>
+          <div style="padding: 16px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 16px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+              <strong>Shipment #SHP-112 (Rice from Green Valley)</strong>
+              <span class="badge badge-warning">In Transit</span>
+            </div>
+            <div style="height:4px; background:#eee; border-radius:2px; margin: 24px 0; position:relative;">
+              <div style="position:absolute; top:0; left:0; height:100%; width:75%; background:var(--color-primary); border-radius:2px;"></div>
+              <div style="position:absolute; top:-6px; left:0; width:16px; height:16px; border-radius:50%; background:var(--color-primary);"></div>
+              <div style="position:absolute; top:-6px; left:50%; width:16px; height:16px; border-radius:50%; background:var(--color-primary);"></div>
+              <div style="position:absolute; top:-6px; right:0; width:16px; height:16px; border-radius:50%; background:#ccc;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-muted);">
+              <span>Dispatched<br>Yesterday</span>
+              <span style="text-align:center;">In Transit<br>Now</span>
+              <span style="text-align:right;">Expected<br>Tomorrow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback Tab -->
+      <div id="tab-under-dev" class="tab-pane">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; color: var(--text-muted); text-align: center;" class="fade-in">
+            <i data-lucide="hammer" style="width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.5;"></i>
+            <h2 id="dev-title" style="font-family: 'Outfit', sans-serif; color: var(--text-main); margin-bottom: 8px;">Module</h2>
+            <p>This module is currently under development for the next phase.</p>
+            <button class="btn-secondary" style="margin-top: 24px;" onclick="window.location.reload()">Back to Overview</button>
+        </div>
       </div>
 
     </div>
