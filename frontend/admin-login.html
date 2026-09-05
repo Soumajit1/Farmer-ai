@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriLink AI — Admin Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .admin-login-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Admin-specific background particles */
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(0, 191, 165, 0.5);
+    border-radius: 50%;
+  }
+
+  .login-card-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 0 24px;
+    z-index: 1;
+  }
+
+  .admin-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    padding: 40px 32px;
+    border-radius: var(--border-radius-md);
+    color: white;
+  }
+
+  .admin-card .input-group label {
+    color: #cbd5e1;
+  }
+
+  .admin-card .input-group input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .admin-card .input-group input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(0, 191, 165, 0.2);
+  }
+
+  .admin-title {
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f8fafc;
+  }
+
+  .back-link {
+    position: absolute;
+    top: 24px;
+    left: 40px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .back-link:hover {
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+  <div class="admin-login-page">
+    
+    <a href="index.html" class="back-link">← Back to Main Portal</a>
+
+    <div class="login-card-container fade-in">
+      <div class="admin-card">
+        <div class="admin-title">
+          <span style="color: var(--color-accent);">⚙️</span> Admin Portal
+        </div>
+        
+        <p style="color: #94a3b8; margin-bottom: 32px; font-size: 14px;">Secure access for system administrators only.</p>
+
+        <form id="adminLoginForm">
+          <div class="input-group">
+            <label for="adminId">Admin ID</label>
+            <input type="text" id="adminId" placeholder="Enter Admin ID" required>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+          </div>
+
+          <p class="error-msg" id="errorMsg" style="color: #ef4444; margin-bottom: 16px;"></p>
+
+          <button type="submit" class="btn-primary" style="width: 100%; background: linear-gradient(135deg, #00bfa5, #004d40);">
+            Authenticate
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const form = document.getElementById('adminLoginForm');
+    const errorMsg = document.getElementById('errorMsg');
+    const submitBtn = form.querySelector('button');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const adminId = document.getElementById('adminId').value;
+      const password = document.getElementById('password').value;
+
+      if (!adminId || !password) {
+        errorMsg.textContent = 'Please fill all fields.';
+        return;
+      }
+
+      submitBtn.innerHTML = 'Authenticating...';
+      submitBtn.style.opacity = '0.8';
+      submitBtn.disabled = true;
+
+      // Mock auth
+      setTimeout(() => {
+        localStorage.setItem('agrilink_role', 'admin');
+        localStorage.setItem('agrilink_user', 'System Admin');
+        window.location.href = 'dashboard-admin.html';
+      }, 800);
+    });
+  </script>
+</body>
+</html>
