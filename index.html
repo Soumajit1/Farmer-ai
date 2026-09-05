@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriLink AI — Login</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h1 class="logo">🌾 AgriLink AI</h1>
+      <p class="tagline">Smart Market Intelligence & Farmer–Buyer Linkage</p>
+
+      <!-- Role Selector -->
+      <div class="role-selector">
+        <button class="role-btn active" data-role="farmer">Farmer</button>
+        <button class="role-btn" data-role="buyer">Buyer</button>
+        <button class="role-btn" data-role="fpo">FPO</button>
+        <button class="role-btn" data-role="admin">Admin</button>
+      </div>
+
+      <form id="loginForm">
+        <label for="identifier">Mobile Number / Email</label>
+        <input type="text" id="identifier" placeholder="Enter mobile number or email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <div class="form-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember"> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p class="error-msg" id="errorMsg"></p>
+
+      <p class="switch-text">
+        New here? <a href="register.html">Create an account</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

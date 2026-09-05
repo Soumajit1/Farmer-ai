@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Farmer Dashboard — AgriLink AI</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div style="padding:40px; text-align:center;">
+    <h1>🌾 Farmer Dashboard</h1>
+    <p id="welcome"></p>
+    <p><a href="index.html">Logout</a></p>
+  </div>
+  <script>
+    const user = localStorage.getItem('agrilink_user');
+    document.getElementById('welcome').textContent = user ? `Welcome, ${user}!` : '';
+  </script>
+</body>
+</html>

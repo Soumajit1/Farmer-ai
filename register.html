@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriLink AI — Register</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h1 class="logo">🌾 AgriLink AI</h1>
+      <p class="tagline">Create your account</p>
+
+      <div class="role-selector">
+        <button class="role-btn active" data-role="farmer">Farmer</button>
+        <button class="role-btn" data-role="buyer">Buyer</button>
+        <button class="role-btn" data-role="fpo">FPO</button>
+      </div>
+
+      <form id="registerForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" placeholder="10-digit mobile number" required>
+
+        <label for="location">Location (District/Village)</label>
+        <input type="text" id="location" placeholder="e.g. Asansol" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required>
+
+        <button type="submit" class="login-btn">Create Account</button>
+      </form>
+
+      <p class="error-msg" id="errorMsg"></p>
+
+      <p class="switch-text">
+        Already have an account? <a href="index.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>
