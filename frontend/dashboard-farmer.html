@@ -6,6 +6,7 @@
 <title>Farmer Dashboard — AgriLink AI</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashboards.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-logo">🌾 AgriLink AI</div>
+      <div class="sidebar-logo"><i data-lucide="tractor"></i> AgriLink AI</div>
     </div>
     
     <nav class="nav-menu">
@@ -39,7 +40,7 @@
     <header class="topbar glass-panel">
       <h2 class="page-title">Overview</h2>
       <div class="topbar-actions">
-        <button class="btn-secondary" style="padding: 8px 16px;">🔔 Notifications</button>
+        <button class="btn-secondary" style="padding: 8px 16px; display:flex; align-items:center; gap:8px;"><i data-lucide="bell" style="width:16px;height:16px;"></i> Notifications</button>
         <div class="user-profile">
           <div class="avatar" id="userAvatar">F</div>
           <span id="userName" style="font-weight: 500;">Farmer User</span>
@@ -85,9 +86,9 @@
 
       <!-- AI Recommendations -->
       <div class="dashboard-section ai-highlight glass-panel-dark">
-        <div class="section-title" style="margin-bottom: 12px;">
-          <span>🤖 AI Market Intelligence</span>
-          <button class="btn-primary" style="font-size: 13px; padding: 8px 16px;">View Full Report</button>
+        <div class="section-title" style="margin-bottom: 12px; display:flex; align-items:center; gap:8px;">
+          <i data-lucide="bot"></i> <span>AI Market Intelligence</span>
+          <button class="btn-primary" style="font-size: 13px; padding: 8px 16px; margin-left: auto;">View Full Report</button>
         </div>
         <div style="display: flex; gap: 24px; flex-wrap: wrap;">
           <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px;">
@@ -190,5 +191,7 @@
     }
   });
 </script>
+<script src="js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

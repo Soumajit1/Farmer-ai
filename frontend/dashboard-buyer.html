@@ -6,6 +6,7 @@
 <title>Buyer Dashboard — AgriLink AI</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashboards.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -14,7 +15,7 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-logo">🌾 AgriLink AI</div>
+      <div class="sidebar-logo"><i data-lucide="tractor"></i> AgriLink AI</div>
     </div>
     
     <nav class="nav-menu">
@@ -39,7 +40,7 @@
         <div class="input-group" style="margin-bottom: 0; width: 250px;">
           <input type="text" placeholder="Search produce, farmers..." style="padding: 8px 12px;">
         </div>
-        <button class="btn-secondary" style="padding: 8px 16px;">🔔</button>
+        <button class="btn-secondary" style="padding: 8px 12px; display:flex; align-items:center;"><i data-lucide="bell" style="width:16px;height:16px;"></i></button>
         <div class="user-profile">
           <div class="avatar" id="userAvatar">B</div>
           <span id="userName" style="font-weight: 500;">Buyer</span>
@@ -151,5 +152,7 @@
   document.getElementById('userName').textContent = user;
   document.getElementById('userAvatar').textContent = user.charAt(0).toUpperCase();
 </script>
+<script src="js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

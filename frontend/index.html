@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgriLink AI — Login</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
   /* Page specific styles for Login split screen */
   .login-page {
@@ -190,7 +191,7 @@
     <!-- Form Side -->
     <div class="form-side">
       <div class="top-nav">
-        <a href="admin-login.html" class="admin-link">⚙️ Admin Portal</a>
+        <a href="admin-login.html" class="admin-link"><i data-lucide="settings" style="width:16px; height:16px;"></i> Admin Portal</a>
       </div>
       <div class="login-card-container">
         
@@ -242,5 +243,6 @@
   </div>
 
   <script src="js/auth.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

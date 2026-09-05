@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgriLink AI — Register</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 <style>
   .register-page {
     display: flex;
@@ -176,15 +177,15 @@
           
           <div class="role-grid">
             <div class="role-option selected" data-role="farmer">
-              <div class="role-icon">🌾</div>
+              <div class="role-icon"><i data-lucide="sprout" style="width:32px;height:32px;"></i></div>
               <div class="role-name">Farmer</div>
             </div>
             <div class="role-option" data-role="buyer">
-              <div class="role-icon">🏢</div>
+              <div class="role-icon"><i data-lucide="building" style="width:32px;height:32px;"></i></div>
               <div class="role-name">Buyer</div>
             </div>
             <div class="role-option" data-role="fpo">
-              <div class="role-icon">👥</div>
+              <div class="role-icon"><i data-lucide="users" style="width:32px;height:32px;"></i></div>
               <div class="role-name">FPO</div>
             </div>
           </div>
@@ -243,7 +244,7 @@
         <!-- Step 4: Confirmation -->
         <div class="form-step" id="step-4">
           <div style="text-align: center;">
-            <div style="font-size: 64px; margin-bottom: 16px;">✅</div>
+            <div style="margin-bottom: 16px;"><i data-lucide="check-circle" style="width: 64px; height: 64px; color: var(--color-primary);"></i></div>
             <h2 class="step-title">Ready to Join!</h2>
             <p class="step-subtitle">Review your details and create your account.</p>
           </div>
@@ -271,5 +272,6 @@
   </div>
 
   <script src="js/register.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

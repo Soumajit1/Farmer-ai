@@ -6,6 +6,7 @@
 <title>Admin Dashboard — AgriLink AI</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashboards.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-logo">🌾 AgriLink AI</div>
+      <div class="sidebar-logo"><i data-lucide="tractor"></i> AgriLink AI</div>
     </div>
     
     <nav class="nav-menu">
@@ -90,7 +91,7 @@
           <div style="display: flex; flex-direction: column; gap: 12px;">
             
             <div style="display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: rgba(0, 191, 165, 0.05); border-left: 4px solid var(--color-accent);">
-              <div style="font-size: 20px;">👤</div>
+              <div><i data-lucide="user" style="color:var(--color-accent); width:24px;height:24px;"></i></div>
               <div>
                 <div style="font-weight: 600; font-size: 14px;">New FPO Registered</div>
                 <div style="font-size: 13px; color: var(--text-muted);">'Green Valley FPO' completed verification.</div>
@@ -99,7 +100,7 @@
             </div>
 
             <div style="display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: rgba(231, 76, 60, 0.05); border-left: 4px solid #e74c3c;">
-              <div style="font-size: 20px;">⚠️</div>
+              <div><i data-lucide="alert-triangle" style="color:#e74c3c; width:24px;height:24px;"></i></div>
               <div>
                 <div style="font-weight: 600; font-size: 14px;">Transaction Flagged</div>
                 <div style="font-size: 13px; color: var(--text-muted);">Unusually high volume dispute reported for TXN-8921.</div>
@@ -108,7 +109,7 @@
             </div>
             
             <div style="display: flex; gap: 12px; padding: 12px; border-radius: 8px; background: rgba(27, 94, 32, 0.05); border-left: 4px solid var(--color-primary);">
-              <div style="font-size: 20px;">💵</div>
+              <div><i data-lucide="banknote" style="color:var(--color-primary); width:24px;height:24px;"></i></div>
               <div>
                 <div style="font-weight: 600; font-size: 14px;">Large Settlement Processed</div>
                 <div style="font-size: 13px; color: var(--text-muted);">₹5.2 Lakhs successfully transferred to 12 farmers.</div>
@@ -164,5 +165,7 @@
     }
   });
 </script>
+<script src="js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

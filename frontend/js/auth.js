@@ -45,8 +45,7 @@ loginForm.addEventListener('submit', async (e) => {
     const mockUsers = {
       farmer: { redirect: 'dashboard-farmer.html' },
       buyer: { redirect: 'dashboard-buyer.html' },
-      fpo: { redirect: 'dashboard-fpo.html' },
-      admin: { redirect: 'dashboard-admin.html' }
+      fpo: { redirect: 'dashboard-fpo.html' }
     };
 
     console.log('Login attempt:', { identifier, password, role: selectedRole });

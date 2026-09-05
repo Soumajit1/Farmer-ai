@@ -6,6 +6,7 @@
 <title>FPO Dashboard — AgriLink AI</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/dashboards.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -15,7 +16,7 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <div class="sidebar-logo">🌾 AgriLink AI</div>
+      <div class="sidebar-logo"><i data-lucide="tractor"></i> AgriLink AI</div>
     </div>
     
     <nav class="nav-menu">
@@ -38,7 +39,7 @@
     <header class="topbar glass-panel">
       <h2 class="page-title">FPO Overview</h2>
       <div class="topbar-actions">
-        <button class="btn-secondary" style="padding: 8px 16px;">🔔</button>
+        <button class="btn-secondary" style="padding: 8px 12px; display:flex; align-items:center;"><i data-lucide="bell" style="width:16px;height:16px;"></i></button>
         <div class="user-profile">
           <div class="avatar" id="userAvatar">O</div>
           <span id="userName" style="font-weight: 500;">FPO Admin</span>
@@ -152,5 +153,7 @@
     }
   });
 </script>
+<script src="js/dashboard.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

@@ -264,7 +264,7 @@ a:hover {
 .top-nav {
   position: absolute;
   top: 24px;
-  right: 40px;
+  left: 40px;
   z-index: 100;
 }
 
