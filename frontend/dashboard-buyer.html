@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Dashboard — AgriLink AI</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboards.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+  
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">🌾 AgriLink AI</div>
+    </div>
+    
+    <nav class="nav-menu">
+      <a href="#" class="nav-item">Overview</a>
+      <a href="#" class="nav-item active">Marketplace</a>
+      <a href="#" class="nav-item">My Offers</a>
+      <a href="#" class="nav-item">Transactions</a>
+      <a href="#" class="nav-item">Logistics</a>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <a href="index.html" class="nav-item" style="color: #e74c3c; padding: 0;">Log Out</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <header class="topbar glass-panel">
+      <h2 class="page-title">Marketplace</h2>
+      <div class="topbar-actions">
+        <div class="input-group" style="margin-bottom: 0; width: 250px;">
+          <input type="text" placeholder="Search produce, farmers..." style="padding: 8px 12px;">
+        </div>
+        <button class="btn-secondary" style="padding: 8px 16px;">🔔</button>
+        <div class="user-profile">
+          <div class="avatar" id="userAvatar">B</div>
+          <span id="userName" style="font-weight: 500;">Buyer</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container fade-in">
+      
+      <!-- Filters -->
+      <div class="dashboard-section glass-panel">
+        <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+          <span style="font-weight: 600;">Filters:</span>
+          <select style="padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <option>All Categories</option>
+            <option>Grains</option>
+            <option>Vegetables</option>
+            <option>Fruits</option>
+          </select>
+          <select style="padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <option>All Locations</option>
+            <option>Within 50km</option>
+            <option>Within 100km</option>
+          </select>
+          <select style="padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <option>Sort by: Best Match</option>
+            <option>Price: Low to High</option>
+            <option>Volume: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Marketplace Grid -->
+      <div class="grid-cards">
+        
+        <!-- Listing 1 -->
+        <div class="card-3d" style="padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <h3 style="color: var(--text-main); margin-bottom: 4px;">Organic Wheat</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Grade A • 50 Quintals</p>
+            </div>
+            <span style="background: rgba(0, 191, 165, 0.1); color: var(--color-accent); padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">AI Verified</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px;">
+            <div class="avatar" style="width: 24px; height: 24px; font-size: 12px;">R</div>
+            <span>Ramesh Kumar (Farmer) • Asansol, 45km away</span>
+          </div>
+
+          <div style="font-size: 24px; font-weight: 700; color: var(--color-primary); font-family: 'Outfit', sans-serif; margin-bottom: 16px;">
+            ₹2,200 <span style="font-size: 14px; font-weight: 400; color: var(--text-muted);">/ Quintal</span>
+          </div>
+          
+          <button class="btn-primary" style="width: 100%;">Make Offer</button>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="card-3d" style="padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <h3 style="color: var(--text-main); margin-bottom: 4px;">Basmati Rice</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Premium • 120 Quintals</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px;">
+            <div class="avatar" style="width: 24px; height: 24px; font-size: 12px; background: #3498db;">F</div>
+            <span>Green Valley FPO • Burdwan, 80km away</span>
+          </div>
+
+          <div style="font-size: 24px; font-weight: 700; color: var(--color-primary); font-family: 'Outfit', sans-serif; margin-bottom: 16px;">
+            ₹3,600 <span style="font-size: 14px; font-weight: 400; color: var(--text-muted);">/ Quintal</span>
+          </div>
+          
+          <button class="btn-primary" style="width: 100%;">Make Offer</button>
+        </div>
+        
+        <!-- Listing 3 -->
+        <div class="card-3d" style="padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <div>
+              <h3 style="color: var(--text-main); margin-bottom: 4px;">Potatoes (Jyoti)</h3>
+              <p style="font-size: 13px; color: var(--text-muted);">Standard • 200 Quintals</p>
+            </div>
+            <span style="background: rgba(243, 156, 18, 0.1); color: #f39c12; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600;">High Demand</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px;">
+            <div class="avatar" style="width: 24px; height: 24px; font-size: 12px;">S</div>
+            <span>Suresh Das (Farmer) • Hooghly, 30km away</span>
+          </div>
+
+          <div style="font-size: 24px; font-weight: 700; color: var(--color-primary); font-family: 'Outfit', sans-serif; margin-bottom: 16px;">
+            ₹850 <span style="font-size: 14px; font-weight: 400; color: var(--text-muted);">/ Quintal</span>
+          </div>
+          
+          <button class="btn-primary" style="width: 100%;">Make Offer</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  const user = localStorage.getItem('agrilink_user') || 'Buyer';
+  document.getElementById('userName').textContent = user;
+  document.getElementById('userAvatar').textContent = user.charAt(0).toUpperCase();
+</script>
+</body>
+</html>
